@@ -22,6 +22,7 @@ const Banner: FC = () => {
           <Grid item md={6} className="animated-area">
             <img src="/images/bunny-blue.svg" alt="" className="banner-image"/>
             <div className="lottery animate__animated animate__infinite animate__pulse">
+              <a href="https://lottery.time.cheap" target="_blank"></a>
               {/*JOIN LOTTERY*/}
             </div>
             <img src="/images/cat.svg" alt="" className="animated-item animate__animated animate__infinite animate__heartBeat cat-img" style={{left: "0px", top: "25%"}}/>
