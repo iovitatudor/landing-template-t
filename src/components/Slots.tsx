@@ -8,9 +8,9 @@ const Slots: FC = () => {
         <h3>0% Tax Time Slots</h3>
         <Container maxWidth={'xl'}>
           <Grid container>
-            <Grid item md={4}>
+            <Grid item md={4} xs={12}>
               <div className="slot-item">
-                <div className="tier">Tier 3</div>
+                <div className="tier animate__animated animate__infinite animate__tada">Tier 3</div>
                 <img src="/images/bunny-yellow-slot.svg" alt=""/>
                 <h5>100 BLOCKS</h5>
                 <p>0% fees buy/sell</p>
@@ -25,9 +25,9 @@ const Slots: FC = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={4} xs={12}>
               <div className="slot-item">
-                <div className="tier" style={{backgroundColor: "#5AC4EC"}}>Tier 2</div>
+                <div className="tier animate__animated animate__infinite animate__tada" style={{backgroundColor: "#5AC4EC"}}>Tier 2</div>
                 <img src="/images/bunny-blue-slot.svg" alt=""/>
                 <h5>200 BLOCKS</h5>
                 <p>0% fees buy/sell</p>
@@ -42,9 +42,9 @@ const Slots: FC = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item md={4}>
+            <Grid item md={4} xs={12}>
               <div className="slot-item">
-                <div className="tier" style={{backgroundColor: "#DF5537"}}>Tier 1</div>
+                <div className="tier animate__animated animate__infinite animate__tada" style={{backgroundColor: "#DF5537"}}>Tier 1</div>
                 <img src="/images/bunny-orange-slot.svg" alt=""/>
                 <h5>300 BLOCKS</h5>
                 <p>0% fees buy/sell</p>

@@ -1,0 +1,330 @@
+@media (max-width: 600px) {
+  .top-bar {
+    padding: 0;
+  }
+
+  .logo {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+  .buttons-area {
+    padding-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: column !important;
+
+    a {
+      display: block;
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  .black-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-right: 0;
+  }
+
+  .contacts-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px !important;
+
+    img {
+      width: 45px;
+    }
+  }
+
+  .contact-address {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column !important;
+    margin-top: 30px !important;
+
+    div {
+      font-size: 16px;
+    }
+  }
+  .contact-address div span {
+    margin-left: 3px;
+
+    img {
+      width: 16px;
+    }
+  }
+
+  .banner-area h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .banner-area p {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .banner-area .banner-btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-area .banner-btns .btn-main {
+    margin-right: 10px;
+  }
+
+  .banner-area {
+    .banner-image {
+      height: auto;
+      width: 70%;
+      margin: 30px 0;
+    }
+
+    .cat-img, .dog-img, .frog-img {
+      width: 100px;
+    }
+  }
+
+  .time-money h2 {
+    top: -20px
+  }
+  .time-money {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .time-money .details {
+    padding: 100px 15px 15px 15px;
+    margin-top: 300px;
+    margin-bottom: 40px;
+
+    img {
+      width: 200px;
+      margin-left: -100px;
+    }
+  }
+
+  .time-money .details h3 {
+    font-size: 45px;
+  }
+  .time-money .details h4 {
+    font-size: 20px;
+  }
+  .time-money .details p {
+    font-size: 16px;
+  }
+
+  .time-money .details-item p {
+    font-size: 14px;
+  }
+
+  .time-money .details-item img {
+    width: 50px;
+    height: 50px;
+  }
+  .slots-area {
+    padding-top: 20px;
+  }
+  .slots-area h3 {
+    font-size: 50px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+  .slots-area .slot-item {
+    margin: 20px 0;
+  }
+  .slots-area .slots-inside {
+    padding-bottom: 20px;
+  }
+
+  .lottery-area {
+    padding-top: 10px;
+  }
+
+  .lottery-area .lottery-area-inside .rotate-image {
+    width: 200%;
+    margin-left: -50%;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details {
+    left: 3%;
+    width: 94%;
+    top: 22%;
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details h3 {
+    font-size: 35px;
+
+    img {
+      margin: 0;
+      width: 30px;
+    }
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .point-1 {
+    top: 10px;
+    left: 10px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .point-2 {
+    top: 10px;
+    right: 10px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .point-3 {
+    bottom: 10px;
+    right: 10px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .point-4 {
+    bottom: 10px;
+    left: 10px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list {
+    padding: 15px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list h4 {
+    font-size: 18px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list p {
+    font-size: 12px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list h5 {
+    font-size: 16px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list .red-block {
+    height: 140px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list .yellow-block {
+    height: 50px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list .blue-block {
+    height: 70px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-details .block-list {
+    margin-top: 0;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-warning {
+    font-size: 10px;
+    padding: 0;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .bottom-heading {
+    font-size: 25px;
+    margin-top: 11px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-time-item {
+    margin: 0 10px;
+    height: 80px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-time-item h6 {
+    font-size: 20px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-time-item p {
+    font-size: 14px;
+  }
+  .lottery-area .lottery-area-inside .lottery-container div {
+    position: relative;
+  }
+  .lottery-area .lottery-area-inside .lottery-container .lottery-time-image {
+    max-height: 200px;
+    position: absolute;
+    left: 0;
+  }
+  .roadmap-area {
+    padding-top: 30px;
+    background-size: cover;
+  }
+  .roadmap-area .title {
+    width: 250px;
+  }
+  .roadmap-arrow {
+    display: none !important;
+  }
+  .roadmap-area .roadmap-area-inside .roadmap-item {
+    flex-direction: column;
+    background-size: cover;
+    min-height: auto;
+  }
+  .roadmap-area .roadmap-area-inside .roadmap-item .roadmap-img-part img {
+    position: static;
+    width: 70%;
+    margin-top: -70px;
+  }
+  .roadmap-area .roadmap-area-inside .roadmap-item .roadmap-img-part {
+    width: 90%;
+    margin-top: -100px;
+    margin-bottom: 0 !important;
+  }
+  .roadmap-area .roadmap-area-inside .roadmap-item .roadmap-img-part {
+    margin: 20px;
+  }
+  .roadmap-area .roadmap-area-inside .roadmap-item .roadmap-list-part {
+    padding: 0 0 60px 0;
+    margin: 20px;
+    margin-top: 0;
+    border: none;
+
+    h4 {
+      margin-bottom: 15px;
+      padding-left: 4px;
+    }
+
+    ul {
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .bottom-block-area {
+    padding-top: 10px;
+  }
+  .bottom-block-area .bottom-block-area-inside {
+    min-height: auto;
+  }
+  .bottom-block-area .bottom-block-area-inside h3 {
+    font-size: 50px;
+    top: -45px;
+  }
+  .bottom-block-area .bottom-block-area-inside button {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .bottom-block-area .bottom-block-area-inside button {
+    font-size: 22px;
+    background-size: 36px;
+    padding: 15px 20px 15px 60px;
+  }
+  .footer-area .links {
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+
+    .black-btn {
+      width: 80%;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+  .footer-area .logo p {
+    font-size: 10px;
+  }
+
+  .slots-area .slot-item img {
+    height: 150px;
+  }
+  .slots-area .slot-item h5 {
+    font-size: 30px;
+  }
+  .slots-area .slot-item .price {
+    margin-bottom: 10px;
+  }
+  .slots-area .slot-item .break {
+    margin: 15px 0;
+  }
+  }

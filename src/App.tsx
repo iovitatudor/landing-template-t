@@ -1,21 +1,25 @@
 import React from 'react';
 import './styles/desktop.scss';
+import './styles/mobile.scss';
 import 'animate.css';
 import TopBar from "./components/TopBar";
+import TopBarMobile from "./components/TopBarMobile";
 import Banner from "./components/Banner";
-import TimeMoney from "./components/TimeMoney";
+import About from "./components/About";
 import Slots from "./components/Slots";
 import Lottery from "./components/Lottery";
 import Roadmap from "./components/Roadmap";
 import BottomBlock from "./components/BottomBlock";
 import Footer from "./components/Footer";
+import {BrowserView, MobileView} from 'react-device-detect';
 
 function App() {
   return (
     <div className="App">
-      <TopBar/>
+      <BrowserView><TopBar/></BrowserView>
+      <MobileView><TopBarMobile/></MobileView>
       <Banner/>
-      <TimeMoney/>
+      <About/>
       <Slots/>
       <Lottery/>
       <Roadmap/>

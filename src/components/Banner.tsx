@@ -20,13 +20,13 @@ const Banner: FC = () => {
             </div>
           </Grid>
           <Grid item md={6} className="animated-area">
-            <img src="/images/bunny-blue.svg" alt="" height="900px"/>
+            <img src="/images/bunny-blue.svg" alt="" className="banner-image"/>
             <div className="lottery animate__animated animate__infinite animate__pulse">
-              JOIN LOTTERY
+              {/*JOIN LOTTERY*/}
             </div>
-            <img src="/images/cat.svg" alt="" className="animated-item animate__animated animate__infinite animate__heartBeat" style={{left: "0px", top: "25%"}}/>
-            <img src="/images/dog.svg" alt="" className="animated-item animate__animated animate__infinite animate__swing" style={{right: "0px", top: "30%"}}/>
-            <img src="/images/frog.svg" alt="" className="animated-item animate__animated animate__infinite animate__tada" style={{right: "5%", top: "55%"}}/>
+            <img src="/images/cat.svg" alt="" className="animated-item animate__animated animate__infinite animate__heartBeat cat-img" style={{left: "0px", top: "25%"}}/>
+            <img src="/images/dog.svg" alt="" className="animated-item animate__animated animate__infinite animate__swing dog-img" style={{right: "0px", top: "30%"}}/>
+            <img src="/images/frog.svg" alt="" className="animated-item animate__animated animate__infinite animate__tada frog-img" style={{right: "5%", top: "55%"}}/>
           </Grid>
         </Grid>
       </Container>

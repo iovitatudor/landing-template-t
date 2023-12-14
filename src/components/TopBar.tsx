@@ -20,9 +20,9 @@ const TopBar: FC = () => {
       <Container maxWidth={'xl'}>
         <Grid container={true}>
           <Grid item md={4} className="buttons-area">
-            <a href="#" className="black-btn">About</a>
-            <a href="#" className="black-btn">TimeLottery</a>
-            <a href="#" className="black-btn">Roadmap</a>
+            <a href="#about" className="black-btn">About</a>
+            <a href="#lottery" className="black-btn">TimeLottery</a>
+            <a href="#roadmap" className="black-btn">Roadmap</a>
           </Grid>
           <Grid item md={4} className="logo-area">
             <a href="#" className="logo">
@@ -34,8 +34,8 @@ const TopBar: FC = () => {
               <img src="/images/like.svg" alt=""/>
             </span>
             <div className="contacts-links">
-              <a href="#"><img src="/images/twitter.svg" alt=""/></a>
-              <a href="#"><img src="/images/telegram.svg" alt=""/></a>
+              <a href="https://twitter.com/TimeMemecoin" target="_blank"><img src="/images/twitter.svg" alt=""/></a>
+              <a href="https://t.me/TIME_loundge" target="_blank"><img src="/images/telegram.svg" alt=""/></a>
             </div>
           </Grid>
           <Grid item md={12} className="contact-address">
