@@ -74,6 +74,7 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
         value: ethers.utils.parseEther(props.price),
       });
       setLoading(true);
+      setOpen(false);
       console.log(transactionResponse);
     } catch (error) {
       setErrorTransaction(true);
