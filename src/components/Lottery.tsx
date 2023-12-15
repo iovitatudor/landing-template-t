@@ -5,6 +5,9 @@ const Lottery: FC = () => {
   return (
     <div className="lottery-area" id="lottery">
       <div className="lottery-area-inside">
+        <div className="lottery animate__animated animate__infinite animate__pulse">
+          <a href="https://lottery.time.cheap" target="_blank"></a>
+        </div>
         <Container maxWidth={"xl"} className="lottery-container">
           <img src="/images/lottery-image.svg" alt="" className="rotate-image"/>
           <div className="lottery-details">
@@ -21,6 +24,7 @@ const Lottery: FC = () => {
             </h3>
 
             <Grid container className="block-list">
+
               <Grid item md={6} xs={6}>
                 <div className="red-block">
                   <h4>50% of Taxes</h4>

@@ -69,6 +69,9 @@ body {
   &:hover {
     background: transparent;
     color: #000;
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
   }
 }
 
@@ -232,40 +235,7 @@ body {
       position: absolute;
     }
 
-    .lottery {
-      position: fixed;
-      z-index: 999;
-      right: 0px;
-      top: 35%;
-      background-image: url("../../public/images/lottery-bg.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 145px;
-      height: 170px;
-      color: var(--black-0, #FFF);
-      text-align: center;
-      font-family: Anton, sans-serif;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 130%;
-      padding-top: 20px;
-      cursor: pointer;
 
-      &:hover {
-        opacity: .9;
-      }
-
-      a {
-        display: flex;
-        width: 100%;
-        height: 100%;
-      }
-    }
   }
 
 }
@@ -1056,7 +1026,6 @@ body {
   width: 60px;
   height: 45px;
   position: relative;
-  //margin: 50px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -1164,9 +1133,110 @@ body {
 
   .open-drawer {
     right: 0;
+
     a {
       transition: all 1000ms ease;
       color: #FFF;
     }
+  }
+}
+
+
+.modal-inside {
+  font-family: 'Red Hat Mono', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+
+  .black-btn {
+    margin-bottom: 20px;
+  }
+}
+
+.modal-text {
+  max-height: 400px;
+  overflow-x: scroll;
+  border: 1px solid #DDD;
+  padding: 15px;
+  margin-bottom: 40px;
+  transition: none;
+
+  p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    transition: none;
+  }
+
+}
+
+.checkbox-input {
+  margin-bottom: 20px;
+
+  span {
+    font-family: 'Red Hat Mono', sans-serif !important;
+  }
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: #5AC4EC !important;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+.lottery-area-inside:hover .lottery {
+  right: 0;
+}
+
+.lottery {
+  position: fixed;
+  z-index: 999;
+  right: -160px;
+  top: 35%;
+  background-image: url("../../public/images/lottery-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 170px;
+  color: var(--black-0, #FFF);
+  text-align: center;
+  font-family: Anton, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  padding-top: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  a {
+    display: flex;
+    width: 100%;
+    height: 100%;
   }
 }
