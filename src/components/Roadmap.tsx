@@ -56,7 +56,7 @@ const Roadmap: FC = () => {
                   <img src="/images/timezone-3.png" alt=""/>
                 </div>
                 <div className="roadmap-list-part">
-                  <h4>TIME zone 1</h4>
+                  <h4>TIME zone 3</h4>
                   <ul>
                     <li>Dextools listing</li>
                     <li>777 + holders</li>
@@ -82,7 +82,7 @@ const Roadmap: FC = () => {
                   <img src="/images/timezone-4.png" alt=""/>
                 </div>
                 <div className="roadmap-list-part">
-                  <h4>TIME zone 2</h4>
+                  <h4>TIME zone 4</h4>
                   <ul>
                     <li>TimeLottery mania</li>
                     <li>777 + holders</li>
@@ -97,7 +97,7 @@ const Roadmap: FC = () => {
                   <img src="/images/timezone-5.png" alt=""/>
                 </div>
                 <div className="roadmap-list-part">
-                  <h4>TIME zone 1</h4>
+                  <h4>TIME zone 5</h4>
                   <ul>
                     <li>Dextools listing</li>
                     <li>777 + holders</li>

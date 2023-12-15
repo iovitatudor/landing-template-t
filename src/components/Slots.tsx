@@ -1,7 +1,23 @@
 import React, {FC} from "react";
 import {Container, Grid} from "@mui/material";
+import SlotItem from "./SlotItem";
+import {useAccount, useContractRead} from "wagmi";
+import {ConnectButton} from "@rainbow-me/rainbowkit";
+import ContractAbi from "../abi/TimeContractABI.json";
+
+const contractAddress = '0x952cc1524BD8084731554744f812c3438687908a';
 
 const Slots: FC = () => {
+  const {isConnected, address} = useAccount();
+
+  const {data: isBrought} = useContractRead({
+    abi: ContractAbi,
+    address: contractAddress,
+    functionName: 'vipAddresses',
+    args: [address],
+    watch: true,
+  });
+
   return (
     <div className="slots-area">
       <div className="slots-inside">
@@ -9,61 +25,28 @@ const Slots: FC = () => {
         <Container maxWidth={'xl'}>
           <Grid container>
             <Grid item md={4} xs={12}>
-              <div className="slot-item">
-                <div className="tier animate__animated animate__infinite animate__tada">Tier 3</div>
-                <img src="/images/bunny-yellow-slot.svg" alt=""/>
-                <h5>100 BLOCKS</h5>
-                <p>0% fees buy/sell</p>
-                <div className="break"></div>
-                <div className="price">
-                  <img src="/images/eth-icon.svg" alt=""/>
-                  0.1 ETH
-                </div>
-                <button className="black-btn">BUY TIME SLOT</button>
-                <div className="left-slots">
-                  50/50 slots left
-                </div>
-              </div>
+              <SlotItem id={2} tierName="Tier 3" image="/images/bunny-yellow-slot.svg" blocks="100" fees="0%"
+                        price="0.1" slots="50" isBrought={isBrought}/>
             </Grid>
             <Grid item md={4} xs={12}>
-              <div className="slot-item">
-                <div className="tier animate__animated animate__infinite animate__tada" style={{backgroundColor: "#5AC4EC"}}>Tier 2</div>
-                <img src="/images/bunny-blue-slot.svg" alt=""/>
-                <h5>200 BLOCKS</h5>
-                <p>0% fees buy/sell</p>
-                <div className="break"></div>
-                <div className="price">
-                  <img src="/images/eth-icon.svg" alt=""/>
-                  0.175 ETH
-                </div>
-                <button className="black-btn">BUY TIME SLOT</button>
-                <div className="left-slots">
-                  30/30 slots left
-                </div>
-              </div>
+              <SlotItem id={1} tierName="Tier 2" backgroundColor="#5AC4EC" image="/images/bunny-blue-slot.svg"
+                        blocks="200" fees="0%" price="0.175" slots="30" isBrought={isBrought}/>
             </Grid>
             <Grid item md={4} xs={12}>
-              <div className="slot-item">
-                <div className="tier animate__animated animate__infinite animate__tada" style={{backgroundColor: "#DF5537"}}>Tier 1</div>
-                <img src="/images/bunny-orange-slot.svg" alt=""/>
-                <h5>300 BLOCKS</h5>
-                <p>0% fees buy/sell</p>
-                <div className="break"></div>
-                <div className="price">
-                  <img src="/images/eth-icon.svg" alt=""/>
-                  0.25 ETH
-                </div>
-                <button className="black-btn">BUY TIME SLOT</button>
-                <div className="left-slots">
-                  20/20 slots left
-                </div>
-              </div>
+              <SlotItem id={0} tierName="Tier 1" backgroundColor="#DF5537" image="/images/bunny-orange-slot.svg"
+                        blocks="300" fees="0%" price="0.25" slots="20" isBrought={isBrought}/>
             </Grid>
           </Grid>
           <Grid item md={12} className="slots-warning">
-            <p>* This is an exclusive and limited for Early Adopters only. Please read the
-              <a href="#" target="_blank"> Lightpaper </a>
-              before buying the slot</p>
+            <p>* This is an exclusive and limited for Early Adopters only. Please read the <a
+              href="https://drive.proton.me/urls/GP3HQY1CY4#IPtkoYAlxLYT" target="_blank">Lightpaper</a> before buying
+              the slot</p>
+            {
+              isConnected &&
+                <div className="connect-btn-wrapper">
+                    <ConnectButton/>
+                </div>
+            }
           </Grid>
         </Container>
       </div>

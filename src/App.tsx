@@ -1,4 +1,5 @@
 import React from 'react';
+import '@rainbow-me/rainbowkit/styles.css';
 import './styles/desktop.scss';
 import './styles/mobile.scss';
 import 'animate.css';

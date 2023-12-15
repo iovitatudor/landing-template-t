@@ -4,7 +4,8 @@ import {Container, Grid} from "@mui/material";
 const contractAddress = '0x952cc1524BD8084731554744f812c3438687908a';
 const TopBarMobile: FC = () => {
   const [copied, setCopied] = useState(false);
-
+  const [burgherClass, setBurgherClass] = useState('');
+  const [drawerClass, setDrawerClass] = useState('');
   const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -13,6 +14,21 @@ const TopBarMobile: FC = () => {
     } catch (e) {
       console.error('copy to clipboard error');
     }
+  }
+
+  const handleBurgher = () => {
+    if (burgherClass === 'open') {
+      setBurgherClass('');
+      setDrawerClass('');
+    } else {
+      setBurgherClass('open');
+      setDrawerClass('open-drawer');
+    }
+  }
+
+  const disableDrawer = () => {
+    setBurgherClass('');
+    setDrawerClass('');
   }
 
   return (
@@ -24,12 +40,19 @@ const TopBarMobile: FC = () => {
               <img src="/images/logo.svg" alt=""/>
             </a>
           </Grid>
-          <Grid item md={4} xs={6} className="buttons-area">
-            <a href="#about" className="black-btn">About</a>
-            <a href="#lottery" className="black-btn">TimeLottery</a>
-            <a href="#roadmap" className="black-btn">Roadmap</a>
+          <Grid item md={4} xs={6} className="burgher-area">
+            <div id="nav-icon3" onClick={handleBurgher} className={burgherClass}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div className={"drawer " + drawerClass}>
+              <a href="#about" className="black-btn" onClick={disableDrawer}>About</a>
+              <a href="#lottery" className="black-btn" onClick={disableDrawer}>TimeLottery</a>
+              <a href="#roadmap" className="black-btn" onClick={disableDrawer}>Roadmap</a>
+            </div>
           </Grid>
-
           <Grid item md={12} xs={6} className="contact-address">
             <div>ERC20 Contract</div>
             <div>{contractAddress.substring(0, 4)}...{contractAddress.substring(contractAddress.length - 4)}
