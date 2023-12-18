@@ -41,7 +41,7 @@ const About: FC = () => {
           <img src="/images/bunny-details.svg" alt=""/>
           <h3>ABOUT $TIME</h3>
           <h4>You can now literally buy your Time</h4>
-          <p>Unique token, no token presales, 90% goes to liquidity, exclusive whitelist technology, 50% of tax
+          <p>No token presales, 90% goes to liquidity, exclusive whitelist technology, 50% of tax
             redistributed to holders, 25% burned, time lottery (every 12 hours), jackpot (every week)</p>
         </div>
         <div>
@@ -52,9 +52,8 @@ const About: FC = () => {
             <Grid item md={6}>
               <div className="details-item yellow-bg">
                 <img src="/images/yellow-icon.svg" alt=""/>
-                <p>Securing a slot offers significant benefits, including zero fees on both buying and selling within
-                  the first 300 trading blocks, thereby ensuring a substantial advantage over the rest of the
-                  market.</p>
+                <p>Securing a slot provides significant benefits, including zero fees for both buying and selling within
+                  the first 300 trading blocks. This ensures a substantial advantage over other market participants.</p>
               </div>
               <div className="details-item blue-bg">
                 <img src="/images/blue-icon.svg" alt=""/>

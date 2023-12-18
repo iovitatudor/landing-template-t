@@ -6,7 +6,7 @@ const Roadmap: FC = () => {
     <div className="roadmap-area" id="roadmap">
       <div className="roadmap-area-inside">
         <Container maxWidth={'xl'}>
-          <img className="title" src="/images/roadmap-title.svg" alt=""/>
+          <img className="title" src="/images/roadmap-title.png" alt=""/>
 
           <Grid container className="roadmap-list">
             <Grid item md={6} xs={12}>
@@ -15,12 +15,13 @@ const Roadmap: FC = () => {
                   <img src="/images/timezone-1.png" alt=""/>
                 </div>
                 <div className="roadmap-list-part">
-                  <h4>TIME zone 1</h4>
+                  <h4>Time Zone 1</h4>
                   <ul>
-                    <li>Dextools listing</li>
-                    <li>777 + holders</li>
-                    <li>$Time trending in Twitter</li>
-                    <li>Dextools listing</li>
+                    <li>Community and KOLs Engagement Presale</li>
+                    <li>Time.cheap paid for 10 years</li>
+                    <li>$TIME Uniswap listing</li>
+                    <li>DEXTOOLS listing</li>
+                    <li>The first 300 trading blocks</li>
                   </ul>
                 </div>
               </div>
@@ -43,9 +44,12 @@ const Roadmap: FC = () => {
                 <div className="roadmap-list-part">
                   <h4>TIME zone 2</h4>
                   <ul>
-                    <li>TimeLottery mania</li>
-                    <li>777 + holders</li>
-                    <li>CEX Listings</li>
+                    <li>1000+ holders</li>
+                    <li>Lotteries and Jackpot start</li>
+                    <li>CMC/CG listings</li>
+                    <li>$TIME Twitter trending</li>
+                    <li>$10M+ daily trading</li>
+                    <li>10% Total Supply Burned</li>
                   </ul>
                 </div>
               </div>
@@ -58,10 +62,11 @@ const Roadmap: FC = () => {
                 <div className="roadmap-list-part">
                   <h4>TIME zone 3</h4>
                   <ul>
-                    <li>Dextools listing</li>
-                    <li>777 + holders</li>
-                    <li>$Time trending in Twitter</li>
-                    <li>Dextools listing</li>
+                    <li>10000+ holders</li>
+                    <li>Global marketing campaign</li>
+                    <li>Celebrity Influencers push</li>
+                    <li>$50M+ daily trading</li>
+                    <li>25% Total Supply burned</li>
                   </ul>
                 </div>
               </div>
@@ -84,9 +89,11 @@ const Roadmap: FC = () => {
                 <div className="roadmap-list-part">
                   <h4>TIME zone 4</h4>
                   <ul>
-                    <li>TimeLottery mania</li>
-                    <li>777 + holders</li>
-                    <li>CEX Listings</li>
+                    <li>25000+ holders</li>
+                    <li>Next-Gen Partnerships</li>
+                    <li>Small CEX listing</li>
+                    <li>$100M+ daily trading</li>
+                    <li>50% Total Supply burned</li>
                   </ul>
                 </div>
               </div>
@@ -99,10 +106,11 @@ const Roadmap: FC = () => {
                 <div className="roadmap-list-part">
                   <h4>TIME zone 5</h4>
                   <ul>
-                    <li>Dextools listing</li>
-                    <li>777 + holders</li>
-                    <li>$Time trending in Twitter</li>
-                    <li>Dextools listing</li>
+                    <li>50000+ holders</li>
+                    <li>Grand CEX listing</li>
+                    <li>TimeMachine</li>
+                    <li>$500M+ daily trading</li>
+                    <li>90% Total Supply burned</li>
                   </ul>
                 </div>
               </div>

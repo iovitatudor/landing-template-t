@@ -8,7 +8,7 @@ const Footer: FC = () => {
         <Grid container>
           <Grid item md={4} xs={6} className="logo">
             <a href="#"><img src="/images/logo.svg" alt=""/></a>
-            <p>TIME © {(new Date().getFullYear())} All rights reserved</p>
+            <p>$TIME Coin © {(new Date().getFullYear())} All rights reserved</p>
           </Grid>
           <Grid item md={8} xs={6} className="links">
             <a href="https://drive.proton.me/urls/GP3HQY1CY4#IPtkoYAlxLYT" target="_blank" className="black-btn">Lightpaper</a>

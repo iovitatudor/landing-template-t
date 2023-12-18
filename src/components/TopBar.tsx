@@ -1,7 +1,8 @@
 import React, {FC, useState} from "react";
 import {Container, Grid} from "@mui/material";
 
-const contractAddress = '0x952cc1524BD8084731554744f812c3438687908a';
+// const contractAddress = '0x952cc1524BD8084731554744f812c3438687908a';
+const contractAddress = 'coming soon';
 const TopBar: FC = () => {
   const [copied, setCopied] = useState(false);
 
@@ -40,7 +41,9 @@ const TopBar: FC = () => {
           </Grid>
           <Grid item md={12} className="contact-address">
             <div>ERC20 Contract</div>
-            <div>{contractAddress.substring(0, 4)}...{contractAddress.substring(contractAddress.length - 4)}
+            <div>
+              coming soon
+              {/*{contractAddress.substring(0, 4)}...{contractAddress.substring(contractAddress.length - 4)}*/}
               <span><img src="/images/copy.svg" alt="" onClick={() => copyToClipboard(contractAddress)}/></span>
               {copied && <section className="copied-message">Copied!</section>}
             </div>

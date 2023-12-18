@@ -21,10 +21,9 @@ interface ISlotItemProps {
   fees: string,
   price: string,
   slots: string,
-  isBrought: boolean | unknown,
 }
 
-const contractAddress = '0x952cc1524BD8084731554744f812c3438687908a';
+const contractAddress = '0x60167Dd85000E75A6f4453364f46D01d1efb5647';
 
 const SlotItem: FC<ISlotItemProps> = ({...props}) => {
   const [errorTransaction, setErrorTransaction] = useState(false);
@@ -42,6 +41,14 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
     address: contractAddress,
     functionName: 'availableSlots',
     args: [props.id],
+    watch: true,
+  });
+
+  const {data: isBrought} = useContractRead({
+    abi: ContractAbi,
+    address: contractAddress,
+    functionName: 'hasPurchased',
+    args: [address, props.id],
     watch: true,
   });
 
@@ -104,7 +111,7 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
         {props.price} ETH
       </div>
       {
-        !props.isBrought ?
+        !isBrought ?
           <>
             {
               !isConnected ?

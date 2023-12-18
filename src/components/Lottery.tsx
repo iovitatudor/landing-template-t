@@ -49,7 +49,7 @@ const Lottery: FC = () => {
             </Grid>
             <div className="lottery-warning">
               <img src="/images/fire-icon.svg" alt=""/>
-              <p>25% of fees are burned! Up is the only way!</p>
+              <p>25% of taxes are burned, fueling potential for an uptrend!</p>
               <img src="/images/fire-icon.svg" alt=""/>
             </div>
             <h4 className="bottom-heading"><span

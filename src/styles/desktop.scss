@@ -801,8 +801,8 @@ body {
 
         h4 {
           color: var(--black-0, #FFF);
-          text-shadow: 3px 3px 0 #000, -3px -3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000, 3px 3px 0 #000;
-          font-size: 24px;
+          text-shadow: 2px 2px #000;
+          font-size: 30px;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
@@ -819,12 +819,12 @@ body {
 
           li {
             color: var(--black-3, #000);
-            font-size: 18px;
+            font-size: 17px;
             font-style: normal;
             font-weight: 500;
             line-height: 150%;
             margin-bottom: 20px;
-            padding-left: 20px;
+            padding-left: 10px;
           }
         }
       }
@@ -947,8 +947,9 @@ body {
   font-weight: 700;
   line-height: 130%;
   letter-spacing: 0.9px;
-  padding: 20px;
+  padding: 13px;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 
@@ -1209,7 +1210,7 @@ body {
 .lottery {
   position: fixed;
   z-index: 999;
-  right: -160px;
+  right: 0;
   top: 35%;
   background-image: url("../../public/images/lottery-bg.svg");
   background-repeat: no-repeat;

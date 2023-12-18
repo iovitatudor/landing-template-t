@@ -5,36 +5,28 @@ import {useAccount, useContractRead} from "wagmi";
 import {ConnectButton} from "@rainbow-me/rainbowkit";
 import ContractAbi from "../abi/TimeContractABI.json";
 
-const contractAddress = '0x952cc1524BD8084731554744f812c3438687908a';
+const contractAddress = '0x60167Dd85000E75A6f4453364f46D01d1efb5647';
 
 const Slots: FC = () => {
   const {isConnected, address} = useAccount();
 
-  const {data: isBrought} = useContractRead({
-    abi: ContractAbi,
-    address: contractAddress,
-    functionName: 'vipAddresses',
-    args: [address],
-    watch: true,
-  });
-
   return (
     <div className="slots-area">
       <div className="slots-inside">
-        <h3>0% Tax Time Slots</h3>
+        <h3>0% Tax $Time Slots</h3>
         <Container maxWidth={'xl'}>
           <Grid container>
             <Grid item md={4} xs={12}>
               <SlotItem id={2} tierName="Tier 3" image="/images/bunny-yellow-slot.svg" blocks="100" fees="0%"
-                        price="0.1" slots="50" isBrought={isBrought}/>
+                        price="0.1" slots="50"/>
             </Grid>
             <Grid item md={4} xs={12}>
               <SlotItem id={1} tierName="Tier 2" backgroundColor="#5AC4EC" image="/images/bunny-blue-slot.svg"
-                        blocks="200" fees="0%" price="0.175" slots="30" isBrought={isBrought}/>
+                        blocks="200" fees="0%" price="0.175" slots="30"/>
             </Grid>
             <Grid item md={4} xs={12}>
               <SlotItem id={0} tierName="Tier 1" backgroundColor="#DF5537" image="/images/bunny-orange-slot.svg"
-                        blocks="300" fees="0%" price="0.25" slots="20" isBrought={isBrought}/>
+                        blocks="300" fees="0%" price="0.25" slots="20"/>
             </Grid>
           </Grid>
           <Grid item md={12} className="slots-warning">
