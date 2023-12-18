@@ -16,7 +16,7 @@ const Footer: FC = () => {
             <a href="#" className="black-btn">Dextools</a>
             <a href="#" className="black-btn">Telegram</a>
             <a href="https://twitter.com/TimeMemecoin" target="_blank" className="black-btn">Twitter</a>
-            <a href="https://t.me/TIME_loundge" target="_blank" className="black-btn">E-mail</a>
+            <a href="mailto:admin@time.cheap" target="_blank" className="black-btn">E-mail</a>
           </Grid>
         </Grid>
       </Container>

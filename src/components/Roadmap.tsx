@@ -17,7 +17,8 @@ const Roadmap: FC = () => {
                 <div className="roadmap-list-part">
                   <h4>Time Zone 1</h4>
                   <ul>
-                    <li>Community and KOLs Engagement Presale</li>
+                    <li>Community and KOLs Engagement</li>
+                    <li>Presale</li>
                     <li>Time.cheap paid for 10 years</li>
                     <li>$TIME Uniswap listing</li>
                     <li>DEXTOOLS listing</li>

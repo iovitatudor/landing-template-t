@@ -105,7 +105,7 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
       <img src={props.image} alt=""/>
       <h5>{props.blocks} BLOCKS</h5>
       <p>{props.fees} fees buy/sell</p>
-      <div className="break"></div>
+      <div className="break" style={{backgroundColor: props.backgroundColor}}></div>
       <div className="price">
         <img src="/images/eth-icon.svg" alt=""/>
         {props.price} ETH
@@ -122,7 +122,6 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
           :
           <div className="slot-brought-message">Hooray! You own a slot!</div>
       }
-
 
       <div className="left-slots">
         {slotsLeft?.toString()}/{props.slots} slots left

@@ -55,7 +55,9 @@ const TopBarMobile: FC = () => {
           </Grid>
           <Grid item md={12} xs={6} className="contact-address">
             <div>ERC20 Contract</div>
-            <div>{contractAddress.substring(0, 4)}...{contractAddress.substring(contractAddress.length - 4)}
+            <div>
+              {/*{contractAddress.substring(0, 4)}...{contractAddress.substring(contractAddress.length - 4)}*/}
+              coming soon...
               <span><img src="/images/copy.svg" alt="" onClick={() => copyToClipboard(contractAddress)}/></span>
               {copied && <section className="copied-message">Copied!</section>}
             </div>

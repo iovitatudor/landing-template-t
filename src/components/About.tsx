@@ -41,8 +41,8 @@ const About: FC = () => {
           <img src="/images/bunny-details.svg" alt=""/>
           <h3>ABOUT $TIME</h3>
           <h4>You can now literally buy your Time</h4>
-          <p>No token presales, 90% goes to liquidity, exclusive whitelist technology, 50% of tax
-            redistributed to holders, 25% burned, time lottery (every 12 hours), jackpot (every week)</p>
+          <p>No token presale, 90% goes to liquidity, exclusive whitelist technology, 50% of tax
+            redistributed to holders, 25% burned, Time Lottery (every 12 hours), Jackpot (every week)</p>
         </div>
         <div>
           <Grid container={true}>
