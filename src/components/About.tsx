@@ -47,7 +47,7 @@ const About: FC = () => {
         <div>
           <Grid container={true}>
             <Grid item md={12}>
-              <img src="/images/2.gif" alt="" width="120%" style={{marginLeft: "-10%"}}/>
+              <img src="/images/1.1.gif" alt="" width="120%" style={{marginLeft: "-10%"}}/>
             </Grid>
             <Grid item md={6}>
               <div className="details-item yellow-bg">
@@ -62,8 +62,14 @@ const About: FC = () => {
               </div>
             </Grid>
             <Grid item md={6}>
-              <img src="/images/save-your-spot.svg" alt="" width="100%"
-                   className="animate__animated animate__infinite animate__tada"/>
+              <BrowserView>
+                <img src="/images/save-your-spot.svg" alt="" width="100%"
+                     className="animate__animated animate__infinite animate__tada"/>
+              </BrowserView>
+              <MobileView>
+                <img src="/images/save-your-spot.png" alt="" width="100%"
+                     className="animate__animated animate__infinite animate__tada"/>
+              </MobileView>
             </Grid>
           </Grid>
         </div>
