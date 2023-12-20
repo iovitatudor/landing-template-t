@@ -1,11 +1,10 @@
 import React, {FC} from "react";
 import {Container, Grid} from "@mui/material";
 import SlotItem from "./SlotItem";
-import {useAccount, useContractRead} from "wagmi";
+import {useAccount} from "wagmi";
 import {ConnectButton} from "@rainbow-me/rainbowkit";
-import ContractAbi from "../abi/TimeContractABI.json";
-
-const contractAddress = '0x60167Dd85000E75A6f4453364f46D01d1efb5647';
+// import ContractAbi from "../abi/TimeContractABI.json";
+// const contractAddress = '0x8227462E8146225aD0EAF1A9fB39Fe629e65D4d3';
 
 const Slots: FC = () => {
   const {isConnected, address} = useAccount();
@@ -31,7 +30,7 @@ const Slots: FC = () => {
           </Grid>
           <Grid item md={12} className="slots-warning">
             <p>* This is an exclusive and limited for Early Adopters only. Please read the <a
-              href="https://drive.proton.me/urls/GP3HQY1CY4#IPtkoYAlxLYT" target="_blank">Lightpaper</a> before buying
+              href="https://drive.proton.me/urls/0JNC4QR8MM#lLknsiLRCZAZ" target="_blank">Lightpaper</a> before buying
               the slot</p>
             {
               isConnected &&
