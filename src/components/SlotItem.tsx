@@ -121,7 +121,7 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
             {
               !isConnected ?
                 <ConnectButton/> :
-                <button className="black-btn" onClick={handleOpen}>BUY TIME
+                <button className="black-btn" id={'pre-slot-tier' + (props.id + 1)} onClick={handleOpen}>BUY TIME
                   SLOT</button>
             }
           </>
