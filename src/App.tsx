@@ -13,9 +13,11 @@ import Roadmap from "./components/Roadmap";
 import BottomBlock from "./components/BottomBlock";
 import Footer from "./components/Footer";
 import {BrowserView, MobileView} from 'react-device-detect';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <BrowserView><TopBar/></BrowserView>
       <MobileView><TopBarMobile/></MobileView>
@@ -27,6 +29,7 @@ function App() {
       <BottomBlock/>
       <Footer/>
     </div>
+    </BrowserRouter>
   );
 }
 

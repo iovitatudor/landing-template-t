@@ -1,4 +1,5 @@
 import React, {FC, useEffect, useState} from "react";
+import {useNavigate} from 'react-router-dom';
 import {ConnectButton} from "@rainbow-me/rainbowkit";
 import {useAccount, useContractRead, useContractWrite} from "wagmi";
 import ContractAbi from "../abi/TimeContractABI.json";
@@ -26,6 +27,8 @@ interface ISlotItemProps {
 const contractAddress = '0x8227462E8146225aD0EAF1A9fB39Fe629e65D4d3';
 
 const SlotItem: FC<ISlotItemProps> = ({...props}) => {
+  const navigate = useNavigate();
+
   const [errorTransaction, setErrorTransaction] = useState(false);
   const [loading, setLoading] = useState(false);
   const {isConnected, address} = useAccount();
@@ -35,7 +38,6 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   const {data: slotsLeft} = useContractRead({
     abi: ContractAbi,
     address: contractAddress,
@@ -70,7 +72,6 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
   }, [errorTransaction]);
 
   const handleBuySlot = async () => {
-    setMessage('');
     try {
       if (!accept) {
         setMessage("Please indicate that you accept the Terms and Conditions");
@@ -82,6 +83,9 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
       });
       setLoading(true);
       setOpen(false);
+      navigate({
+        search: "?success=tier" + (props.id + 1)
+      });
       console.log(transactionResponse);
     } catch (error) {
       setErrorTransaction(true);
@@ -116,7 +120,8 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
             {
               !isConnected ?
                 <ConnectButton/> :
-                <button className="black-btn" onClick={handleOpen}>BUY TIME SLOT</button>
+                <button className="black-btn" onClick={handleOpen}>BUY TIME
+                  SLOT</button>
             }
           </>
           :
@@ -146,16 +151,15 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
                                   setAccept(!accept)
                                 }} label="I have read and accepted Terms and Conditions"/>
             </div>
-            <button className="black-btn" onClick={handleBuySlot}>BUY TIME SLOT</button>
+            <button className="black-btn" id={'slot-tier' + (props.id + 1)} onClick={handleBuySlot}>BUY TIME SLOT</button>
             {
               errorTransaction &&
                 <p style={{color: '#eb2f06', marginBottom: '20px'}}>
                     <small>Insufficient funds or rejected by Your wallet</small>
                 </p>
             }
-
             {
-              message  &&
+              message &&
                 <p style={{color: '#eb2f06', marginBottom: '20px'}}>
                     <small>{message}</small>
                 </p>
