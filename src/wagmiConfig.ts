@@ -11,7 +11,7 @@ import {
 
 
 const {chains, publicClient} = configureChains(
-    [goerli],
+    [mainnet],
     [
         // @ts-ignore
         alchemyProvider({apiKey: process.env.REACT_APP_ALCHEMY_API_KEY}),
