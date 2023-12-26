@@ -85,7 +85,7 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
       setLoading(true);
       setOpen(false);
       navigate({
-        search: "?success=tier" + (props.id + 1)
+        search: "?success=tier" + (props.id + 1) + "&wallet=" + (address)
       });
       console.log(transactionResponse);
     } catch (error) {
