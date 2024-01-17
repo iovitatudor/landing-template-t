@@ -17,15 +17,15 @@ const Slots: FC = () => {
           <Grid container>
             <Grid item md={4} xs={12}>
               <SlotItem id={2} tierName="Tier 3" image="/images/bunny-yellow-slot.svg" blocks="100" fees="0%"
-                        price="0.1" slots="50"/>
+                        price="0.1" slots="100"/>
             </Grid>
             <Grid item md={4} xs={12}>
               <SlotItem id={1} tierName="Tier 2" backgroundColor="#5AC4EC" image="/images/bunny-blue-slot.svg"
-                        blocks="200" fees="0%" price="0.175" slots="30"/>
+                        blocks="200" fees="0%" price="0.175" slots="60"/>
             </Grid>
             <Grid item md={4} xs={12}>
               <SlotItem id={0} tierName="Tier 1" backgroundColor="#DF5537" image="/images/bunny-orange-slot.svg"
-                        blocks="300" fees="0%" price="0.25" slots="20"/>
+                        blocks="300" fees="0%" price="0.25" slots="40"/>
             </Grid>
           </Grid>
           <Grid item md={12} className="slots-warning">

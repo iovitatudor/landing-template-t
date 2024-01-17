@@ -24,7 +24,8 @@ interface ISlotItemProps {
   slots: string,
 }
 
-const contractAddress = '0x8227462E8146225aD0EAF1A9fB39Fe629e65D4d3';
+const contractAddress = '0x691F2ad195269036093f8986C05E04EeD059C14b';
+// const contractAddress = '0x8227462E8146225aD0EAF1A9fB39Fe629e65D4d3';
 // const contractAddress = '0x60167Dd85000E75A6f4453364f46D01d1efb5647';
 
 const SlotItem: FC<ISlotItemProps> = ({...props}) => {
