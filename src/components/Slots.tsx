@@ -10,7 +10,7 @@ const Slots: FC = () => {
   const {isConnected, address} = useAccount();
 
   return (
-    <div className="slots-area">
+    <div className="slots-area" id="slots">
       <div className="slots-inside">
         <h3>0% Tax $Time Slots</h3>
         <Container maxWidth={'xl'}>
@@ -30,7 +30,7 @@ const Slots: FC = () => {
           </Grid>
           <Grid item md={12} className="slots-warning">
             <p>* This is an exclusive and limited for Early Adopters only. Please read the <a
-              href="https://drive.proton.me/urls/0JNC4QR8MM#lLknsiLRCZAZ" target="_blank">Lightpaper</a> before buying
+              href="https://drive.proton.me/urls/DKXXYCAA78#3iVoaQdHlKMs" target="_blank">Lightpaper</a> before buying
               the slot</p>
             {
               isConnected &&

@@ -51,6 +51,7 @@ const TopBarMobile: FC = () => {
               <a href="#about" className="black-btn" onClick={disableDrawer}>About</a>
               <a href="#lottery" className="black-btn" onClick={disableDrawer}>TimeLottery</a>
               <a href="#roadmap" className="black-btn" onClick={disableDrawer}>Roadmap</a>
+              <a href="#slots" className="black-btn" onClick={disableDrawer}>Buy Slot</a>
             </div>
           </Grid>
           <Grid item md={12} xs={6} className="contact-address">

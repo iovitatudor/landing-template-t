@@ -20,12 +20,13 @@ const TopBar: FC = () => {
     <div className="top-bar">
       <Container maxWidth={'xl'}>
         <Grid container={true}>
-          <Grid item md={4} className="buttons-area">
+          <Grid item md={5} className="buttons-area">
             <a href="#about" className="black-btn">About</a>
             <a href="#lottery" className="black-btn">TimeLottery</a>
             <a href="#roadmap" className="black-btn">Roadmap</a>
+            <a href="#slots" className="black-btn red-btn">Buy Slot</a>
           </Grid>
-          <Grid item md={4} className="logo-area">
+          <Grid item md={3} className="logo-area">
             <a href="#" className="logo">
               <img src="/images/logo.svg" alt=""/>
             </a>
