@@ -98,7 +98,9 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
       navigate({
         search: "?success=tier" + (props.id + 1) + "&wallet=" + (address)
       });
-      await addTelegramBonus();
+      if (telegramUsername && telegramUsername !== '@null') {
+        await addTelegramBonus();
+      }
       console.log(transactionResponse);
     } catch (error) {
       setErrorTransaction(true);
@@ -168,7 +170,7 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
           <Typography id="modal-modal-description" sx={{mt: 2}}>
             <ModalText/>
             {
-              telegramUsername &&
+              telegramUsername && telegramUsername !== '@null' &&
                 <div className="checkbox-input">
                     <TextField id="outlined-basic"
                                label="Telegram username"
