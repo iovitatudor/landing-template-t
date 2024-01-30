@@ -10,7 +10,7 @@ const Slots: FC = () => {
   const {isConnected, address} = useAccount();
 
   return (
-    <div className="slots-area" id="slots">
+    <div className="slots-area">
       <div className="slots-inside">
         <h3>0% Tax $Time Slots</h3>
         <Container maxWidth={'xl'}>

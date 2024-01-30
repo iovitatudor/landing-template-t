@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from "react";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, useSearchParams} from 'react-router-dom';
 import {ConnectButton} from "@rainbow-me/rainbowkit";
 import {useAccount, useContractRead, useContractWrite} from "wagmi";
 import ContractAbi from "../abi/TimeContractABI.json";
@@ -12,6 +12,7 @@ import ModalClose from '@mui/joy/ModalClose';
 import ModalText from "./ModalText";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import TextField from '@mui/material/TextField';
 
 interface ISlotItemProps {
   id: number,
@@ -30,6 +31,7 @@ const contractAddress = '0x691F2ad195269036093f8986C05E04EeD059C14b';
 
 const SlotItem: FC<ISlotItemProps> = ({...props}) => {
   const navigate = useNavigate();
+  const [queryParameters] = useSearchParams();
 
   const [errorTransaction, setErrorTransaction] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -37,6 +39,7 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
   const [open, setOpen] = React.useState(false);
   const [accept, setAccept] = useState(false);
   const [message, setMessage] = useState('');
+  const [telegramUsername, setTelegramUsername] = useState<string | null>('');
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -64,6 +67,11 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
   });
 
   useEffect(() => {
+    const usernameParam = queryParameters.get("username");
+    setTelegramUsername(`@${usernameParam}`);
+  }, []);
+
+  useEffect(() => {
     setLoading(false);
   }, [slotsLeft]);
 
@@ -83,14 +91,27 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
         // @ts-ignore
         value: ethers.utils.parseEther(props.price),
       });
+
       setLoading(true);
       setOpen(false);
+
       navigate({
         search: "?success=tier" + (props.id + 1) + "&wallet=" + (address)
       });
+      await addTelegramBonus();
       console.log(transactionResponse);
     } catch (error) {
       setErrorTransaction(true);
+    }
+  }
+
+
+  const addTelegramBonus = async () => {
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/telegram/subscribing/slots/${telegramUsername}?slot${props.id}=${address}`);
+      return await response.json();
+    } catch (e) {
+      console.log(e);
     }
   }
 
@@ -99,7 +120,6 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
       {
         loading && <Preloader/>
       }
-
       {
         (slotsLeft?.toString() === "0") &&
           <div className="soldOut"><p>sold out</p></div>
@@ -147,13 +167,26 @@ const SlotItem: FC<ISlotItemProps> = ({...props}) => {
           </h2>
           <Typography id="modal-modal-description" sx={{mt: 2}}>
             <ModalText/>
+            {
+              telegramUsername &&
+                <div className="checkbox-input">
+                    <TextField id="outlined-basic"
+                               label="Telegram username"
+                               variant="outlined"
+                               style={{width: "100%"}}
+                               value={telegramUsername}
+                               onChange={(e) => setTelegramUsername(e.target.value)}
+                    />
+                </div>
+            }
             <div className="checkbox-input">
               <FormControlLabel required control={<Checkbox/>} checked={accept}
                                 onChange={() => {
                                   setAccept(!accept)
                                 }} label="I have read and accepted Terms and Conditions"/>
             </div>
-            <button className="black-btn" id={'slot-tier' + (props.id + 1)} onClick={handleBuySlot}>BUY TIME SLOT</button>
+            <button className="black-btn" id={'slot-tier' + (props.id + 1)} onClick={handleBuySlot}>BUY TIME SLOT
+            </button>
             {
               errorTransaction &&
                 <p style={{color: '#eb2f06', marginBottom: '20px'}}>

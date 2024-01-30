@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import '@rainbow-me/rainbowkit/styles.css';
 import './styles/desktop.scss';
 import './styles/mobile.scss';
@@ -13,9 +13,22 @@ import Roadmap from "./components/Roadmap";
 import BottomBlock from "./components/BottomBlock";
 import Footer from "./components/Footer";
 import {BrowserView, MobileView} from 'react-device-detect';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 function App() {
+  const ref = React.useRef<HTMLInputElement>(null);
+
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if(hash === "#slots" && ref.current){
+      window.scrollTo({
+        top: ref.current.offsetTop,
+        behavior: "smooth"
+      })
+    }
+  }, []);
+
   return (
     <BrowserRouter>
     <div className="App">
@@ -23,7 +36,9 @@ function App() {
       <MobileView><TopBarMobile/></MobileView>
       <Banner/>
       <About/>
-      <Slots/>
+      <div id="slots" ref={ref}>
+        <Slots/>
+      </div>
       <Lottery/>
       <Roadmap/>
       <BottomBlock/>
