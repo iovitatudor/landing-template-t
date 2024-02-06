@@ -6,7 +6,7 @@ const Lottery: FC = () => {
     <div className="lottery-area" id="lottery">
       <div className="lottery-area-inside">
         <div className="lottery animate__animated animate__infinite animate__pulse">
-          <a href="https://lottery.time.cheap" target="_blank"></a>
+          <a href="https://t.me/TimeLotteryBot" target="_blank"></a>
         </div>
         <Container maxWidth={"xl"} className="lottery-container">
           <img src="/images/lottery-image.svg" alt="" className="rotate-image"/>

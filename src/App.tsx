@@ -14,14 +14,14 @@ import BottomBlock from "./components/BottomBlock";
 import Footer from "./components/Footer";
 import {BrowserView, MobileView} from 'react-device-detect';
 import {BrowserRouter} from 'react-router-dom';
+import InitialPopup from "./components/InitialPopup";
 
 function App() {
   const ref = React.useRef<HTMLInputElement>(null);
 
-
   useEffect(() => {
     const hash = window.location.hash;
-    if(hash === "#slots" && ref.current){
+    if (hash === "#slots" && ref.current) {
       window.scrollTo({
         top: ref.current.offsetTop,
         behavior: "smooth"
@@ -31,19 +31,20 @@ function App() {
 
   return (
     <BrowserRouter>
-    <div className="App">
-      <BrowserView><TopBar/></BrowserView>
-      <MobileView><TopBarMobile/></MobileView>
-      <Banner/>
-      <About/>
-      <div id="slots" ref={ref}>
-        <Slots/>
+      <div className="App">
+        <BrowserView><TopBar/></BrowserView>
+        <MobileView><TopBarMobile/></MobileView>
+        <Banner/>
+        <About/>
+        <div id="slots" ref={ref}>
+          <Slots/>
+        </div>
+        <Lottery/>
+        <Roadmap/>
+        <BottomBlock/>
+        <Footer/>
+        <InitialPopup/>
       </div>
-      <Lottery/>
-      <Roadmap/>
-      <BottomBlock/>
-      <Footer/>
-    </div>
     </BrowserRouter>
   );
 }
