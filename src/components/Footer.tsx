@@ -11,7 +11,9 @@ const Footer: FC = () => {
             <p>$TIME Coin © {(new Date().getFullYear())} All rights reserved</p>
           </Grid>
           <Grid item md={8} xs={6} className="links">
-            <a href="https://drive.proton.me/urls/DKXXYCAA78#3iVoaQdHlKMs" target="_blank" className="black-btn">Lightpaper</a>
+            <a href="https://t.me/TimeLotteryBot" className="black-btn">SPIN&WIN APP</a>
+            <a href="https://drive.proton.me/urls/DKXXYCAA78#3iVoaQdHlKMs" target="_blank"
+               className="black-btn">Lightpaper</a>
             <a href="#" className="black-btn">Etherscan</a>
             <a href="#" className="black-btn">Dextools</a>
             <a href="#" className="black-btn">Telegram</a>

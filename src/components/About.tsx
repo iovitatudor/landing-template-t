@@ -4,15 +4,18 @@ import {BrowserView, MobileView} from 'react-device-detect';
 
 const About: FC = () => {
   const [textSize, setTextSize] = useState(180);
-  const [mobTextSize, setMobTextSize] = useState(50);
+  const [mobTextSize, setMobTextSize] = useState(20);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => {
-          if (window.pageYOffset > 100 && window.pageYOffset < 1200) {
-            const size = (window.pageYOffset / 8) + 160;
+          if (window.pageYOffset > 100 && window.pageYOffset < 1700) {
+            const size = (window.pageYOffset / 8) + 60;
             setTextSize(size);
-            setMobTextSize((window.pageYOffset / 20) + 50);
+          }
+
+          if (window.pageYOffset > 2200 && window.pageYOffset < 3300) {
+            setMobTextSize((window.pageYOffset / 40) + 40);
           }
         }
       );

@@ -74,6 +74,7 @@ body {
     perspective: 1000px;
   }
 }
+
 .red-btn {
   //w;
 }
@@ -194,6 +195,8 @@ body {
 }
 
 .banner-area {
+  padding-bottom: 100px;
+
   h1 {
     font-family: 'Anton', sans-serif;
     color: #FFF;
@@ -223,7 +226,8 @@ body {
   }
 
   .banner-btns {
-    margin-top: 100px;
+    margin-top: 55px;
+    margin-bottom: 80px;
 
     .btn-main {
       margin-right: 40px;
@@ -370,6 +374,31 @@ body {
     background: var(--blue-1, #A4DEF4);
     box-shadow: -5px 5px 0px 0px #19A6DC;
     transform: rotate(3deg);
+  }
+}
+
+.how-to-play {
+  background-image: url("../../public/images/blue-bg.svg");
+  padding-bottom: 200px;
+  padding-top: 250px;
+
+  .how-to-play-item {
+    padding: 20px;
+
+    img {
+      width: 100%;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    p {
+      margin-top: 15px;
+    }
   }
 }
 

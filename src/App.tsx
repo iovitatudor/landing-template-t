@@ -14,6 +14,7 @@ import BottomBlock from "./components/BottomBlock";
 import Footer from "./components/Footer";
 import {BrowserView, MobileView} from 'react-device-detect';
 import {BrowserRouter} from 'react-router-dom';
+import HowToPlay from "./components/HowToPlay";
 
 function App() {
   const ref = React.useRef<HTMLInputElement>(null);
@@ -35,6 +36,7 @@ function App() {
       <BrowserView><TopBar/></BrowserView>
       <MobileView><TopBarMobile/></MobileView>
       <Banner/>
+      <HowToPlay/>
       <About/>
       <div id="slots" ref={ref}>
         <Slots/>
