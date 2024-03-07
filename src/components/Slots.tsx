@@ -30,7 +30,7 @@ const Slots: FC = () => {
           </Grid>
           <Grid item md={12} className="slots-warning">
             <p>* This is an exclusive and limited for Early Adopters only. Please read the <a
-              href="https://drive.proton.me/urls/DKXXYCAA78#3iVoaQdHlKMs" target="_blank">Lightpaper</a> before buying
+              href="https://docs.google.com/document/d/1sv9FpJnE9uOS37M-0GD3mc6j06nNd0v3lf6kzGC-Uds/edit#heading=h.gjdgxs" target="_blank">Lightpaper</a> before buying
               the slot</p>
             {
               isConnected &&
