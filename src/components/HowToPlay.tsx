@@ -20,47 +20,48 @@ const HowToPlay: FC = () => {
   }, []);
 
   return (
-    <div className="time-money how-to-play" id="how-to-play">
+    <div className="time-money how-to-play" id="about">
       <Container maxWidth={'xl'}>
         <BrowserView>
           <h2 id="heading-1" style={{fontSize: textSize}}>
-            <span className="pink-color">How</span>
-            <span className="white-color"> to</span><br/>
-            <span className="red-color">Play</span>
+            <span className="white-color">About</span><br/>
+            <span className="white-color">$blabla</span><br/>
           </h2>
         </BrowserView>
         <MobileView>
           <h2 id="heading-1" style={{fontSize: mobTextSize}}>
-            <span className="pink-color">How</span>
-            <span className="white-color"> to</span><br/>
-            <span className="red-color">Play</span>
+            <span className="white-color">About</span><br/>
+            <span className="white-color">$blabla</span><br/>
           </h2>
         </MobileView>
         <div>
           <Grid container={true}>
-            <Grid item md={4} className="how-to-play-item">
-              <img src="/images/how-to-play1.svg" alt=""/>
-              <h3>SPIN&EARN</h3>
-              <p>By spinning the wheel, inviting friends, buying slots, using boosts, expanding your clan through the
-                referral program, and joining our socials, you earn carrots, our beloved bunnies! The more carrots you
-                have, the more $TIME tokens you win!</p>
+            <Grid item md={3} className="how-to-play-item">
+              <img src="/About-image-1.png" alt=""/>
+              <h3>BLEK ILON MUSC ($BLM)</h3>
+              <p>Elon Musc, the titan of Tesla and SpaceX, is the alpha of the tech universe. His mission? To launch
+                rockets to Mars, electrify our roads, and meme the financial world like no other. Our vision? We see him
+                black!!!</p>
             </Grid>
-            <Grid item md={4} className="how-to-play-item">
-              <img src="/images/how-to-play2.svg" alt=""/>
-              <h3>BATTLE&WIN</h3>
-              <p>Now you can create your clan, formed of frens that came through your ref link and their frens, as well.
-                Moreover, you can attack other clans and take their carrots. Find on the map the clan you want to attack
-                and tell your team to spin the wheel!</p>
+            <Grid item md={3} className="how-to-play-item">
+              <img src="/About-image-2.png" alt=""/>
+              <h3>The Dogefather himself</h3>
+              <p>One of Musc's besties? The Dogefather himself, leading us to the moon one meme at a time. But watch out
+                for his crypto enemies, the Bitcoin maximalists and SEC regulators, always lurking in the shadows.</p>
             </Grid>
-            <Grid item md={4} className="how-to-play-item">
-              <img src="/images/how-to-play3.svg" alt=""/>
-              <h3>LOTTERY&JACKPOT</h3>
-              <p>Aside from the in-game utility (players can use coins to acquire: boosts, defending/attacking powers,
-                etc.), we redistribute 50% of all collected trading taxes back to players through lotteries (every 12h)
-                and weekly jackpots!</p>
+            <Grid item md={3} className="how-to-play-item">
+              <img src="/About-image-3.png" alt=""/>
+              <h3>We stan Meme Lord</h3>
+              <p>We're here to unite all Musketeers, from Dogecoin fanatics to Tesla investors, and support each other
+                through the bull runs and bear markets. Musc is a visionary, a disruptor, and a meme lord
+                extraordinaire. We stan Musc!</p>
             </Grid>
-            <Grid item md={12} xs={12} className="how-to-play-item"  style={{textAlign: "center", marginTop: "50px"}}>
-                <a href="https://t.me/TimeLotteryBot" className="black-btn">Play now</a>
+            <Grid item md={3} className="how-to-play-item">
+              <img src="/4.png" alt=""/>
+              <h3>The rocket-riding pioneer</h3>
+              <p>Elon Musk, the rocket-riding pioneer of SpaceX and electric revolutionist at Tesla, stands as the
+                commanding force in the realm of innovation. His grand purpose? To propel humanity to Mars, electrify
+                our roads with sustainable energy, and disrupt industries with audacity unmatched.</p>
             </Grid>
           </Grid>
         </div>

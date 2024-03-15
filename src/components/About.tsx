@@ -1,6 +1,7 @@
 import React, {FC, useEffect, useState} from "react";
-import {Container, Grid} from "@mui/material";
+import {Container} from "@mui/material";
 import {BrowserView, MobileView} from 'react-device-detect';
+import {Content} from "../content";
 
 const About: FC = () => {
   const [textSize, setTextSize] = useState(180);
@@ -23,58 +24,27 @@ const About: FC = () => {
   }, []);
 
   return (
-    <div className="time-money" id="about">
+    <div className="time-money" id="tokenomics">
       <Container maxWidth={'xl'}>
         <BrowserView>
           <h2 id="heading-1" style={{fontSize: textSize}}>
-            <span className="pink-color">$TIME</span>
-            <span className="white-color"> is</span>
-            <span className="blue-color">money</span>
+            <span className="white-color">BLEK </span> <br/>
+            <span className="white-color">ILON MUSC</span>
           </h2>
         </BrowserView>
         <MobileView>
           <h2 id="heading-1" style={{fontSize: mobTextSize}}>
-            <span className="pink-color">$TIME</span>
-            <span className="white-color"> is</span>
-            <span className="blue-color">money</span>
+          <span className="white-color">BLEK </span> <br/>
+            <span className="white-color">ILON MUSC</span>
           </h2>
         </MobileView>
 
         <div className="details">
-          <img src="/images/bunny-details.svg" alt=""/>
-          <h3>ABOUT $TIME</h3>
-          <h4>You can now literally buy your Time</h4>
-          <p>No token presale, 90% goes to liquidity, exclusive whitelist technology, 50% of tax
-            redistributed to holders, 25% burned, Time Lottery (every 12 hours), Jackpot (every week)</p>
-        </div>
-        <div>
-          <Grid container={true}>
-            <Grid item md={12}>
-              <img src="/images/1.1.gif" alt="" width="120%" style={{marginLeft: "-10%"}}/>
-            </Grid>
-            <Grid item md={6}>
-              <div className="details-item yellow-bg">
-                <img src="/images/yellow-icon.svg" alt=""/>
-                <p>Securing a slot provides significant benefits, including zero fees for both buying and selling within
-                  the first 300 trading blocks. This ensures a substantial advantage over other market participants.</p>
-              </div>
-              <div className="details-item blue-bg">
-                <img src="/images/blue-icon.svg" alt=""/>
-                <p>The presale round operates on a first-come, first-served basis, ensuring that once all the slots are
-                  sold, the sale concludes. <b>Don't waste Your Time!</b></p>
-              </div>
-            </Grid>
-            <Grid item md={6}>
-              <BrowserView>
-                <img src="/images/save-your-spot.svg" alt="" width="100%"
-                     className="animate__animated animate__infinite animate__tada"/>
-              </BrowserView>
-              <MobileView>
-                <img src="/images/save-your-spot.png" alt="" width="100%"
-                     className="animate__animated animate__infinite animate__tada"/>
-              </MobileView>
-            </Grid>
-          </Grid>
+          <h3>{Content.totalSupply}</h3>
+          <h4>1 000 000 000 $BLM</h4>
+          <p>100% SAFE LAUNCH</p>
+          <p>0% TAXES FOR BUY AND SELL</p>
+          <p>CONTRACT RENOUNSED</p>
         </div>
       </Container>
     </div>

@@ -7,10 +7,6 @@ import TopBar from "./components/TopBar";
 import TopBarMobile from "./components/TopBarMobile";
 import Banner from "./components/Banner";
 import About from "./components/About";
-import Slots from "./components/Slots";
-import Lottery from "./components/Lottery";
-import Roadmap from "./components/Roadmap";
-import BottomBlock from "./components/BottomBlock";
 import Footer from "./components/Footer";
 import {BrowserView, MobileView} from 'react-device-detect';
 import {BrowserRouter} from 'react-router-dom';
@@ -37,14 +33,7 @@ function App() {
       <MobileView><TopBarMobile/></MobileView>
       <Banner/>
       <HowToPlay/>
-
       <About/>
-      <div id="slots" ref={ref}>
-        <Slots/>
-      </div>
-      <Lottery/>
-      <Roadmap/>
-      <BottomBlock/>
       <Footer/>
     </div>
     </BrowserRouter>
