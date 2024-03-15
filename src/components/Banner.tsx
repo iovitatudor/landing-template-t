@@ -17,7 +17,7 @@ const Banner: FC = () => {
               rockets to Mars, electrify our roads, and meme the financial world like no other. Our vision? We see him
               black!!!</p>
           </Grid>
-          <Grid item md={6} className="animated-area">
+          <Grid item md={6} className="animated-area" style={{ margin: "20px auto"}}>
             <video src="/Main-Gif.mp4" autoPlay={true} muted={true} width="100%" loop={true}
                    style={{borderRadius: "8px"}}></video>
           </Grid>
