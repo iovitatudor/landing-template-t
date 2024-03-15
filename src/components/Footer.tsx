@@ -14,7 +14,7 @@ const Footer: FC = () => {
           <Grid item md={8} xs={6} className="links">
             <a href={Content.telegramLink} target="_blank" className="black-btn">Telegram</a>
             <a href={Content.twitterLink} target="_blank" className="black-btn">Twitter</a>
-            <a href={Content.raydiumLink} target="_blank" className="black-btn">Raydium</a>
+            {/*<a href={Content.raydiumLink} target="_blank" className="black-btn">Raydium</a>*/}
             <a href={Content.dexScreenerLink} target="_blank" className="black-btn">DexScreener</a>
             <a href={Content.solscanLink} target="_blank" className="black-btn">Solscan</a>
           </Grid>
