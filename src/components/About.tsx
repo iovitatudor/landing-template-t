@@ -44,7 +44,8 @@ const About: FC = () => {
           <h4>1 000 000 000 $BLM</h4>
           <p>100% SAFE LAUNCH</p>
           <p>0% TAXES FOR BUY AND SELL</p>
-          <p>CONTRACT RENOUNSED</p>
+          <p>LIQUIDITY BURNED</p>
+          <p>CONTRACT RENOUNCED</p>
         </div>
       </Container>
     </div>

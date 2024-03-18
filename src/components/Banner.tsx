@@ -1,7 +1,8 @@
-import React, {FC} from "react";
+import React, {FC, useState} from "react";
 import {Container, Grid} from "@mui/material";
 
 const Banner: FC = () => {
+  const [str, setStr] = useState("{first}");
   return (
     <div className="banner-area">
       <Container maxWidth={"xl"}>
@@ -13,11 +14,12 @@ const Banner: FC = () => {
               <span className="white-color">MUSC</span>
               <span className="white-color"> ($BLM)</span>
             </h1>
-            <p>Elon Musc, the titan of Tesla and SpaceX, is the alpha of the tech universe. His mission? To launch
-              rockets to Mars, electrify our roads, and meme the financial world like no other. Our vision? We see him
-              black!!!</p>
+            <p>Yo yo yo {str}! 🚀 Welcome to the ultimate space where BlekMusc, da real tech wizard, is livin' large!
+              🧙‍♂️🌌 This genius is all about marsifying Earth 🌍➡️🔴 and slapping solar panels on everything that moves
+              (and doesn't!). 🌞💡 With his BFF Starz, he's got rockets blasting 🚀 and e-cars zooming 🏎️💨 like there's no
+              tomorrow.</p>
           </Grid>
-          <Grid item md={6} className="animated-area" style={{ margin: "20px auto"}}>
+          <Grid item md={6} className="animated-area" style={{margin: "20px auto"}}>
             <video src="/Main-Gif.mp4" autoPlay={true} muted={true} width="100%" loop={true}
                    style={{borderRadius: "8px"}}></video>
           </Grid>
